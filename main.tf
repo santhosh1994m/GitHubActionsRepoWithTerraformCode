@@ -1,5 +1,5 @@
 provider "docker" {
- 
+  host = "tcp://0.0.0.0:2376/"
 }
 
 # Create a container
@@ -10,5 +10,4 @@ resource "docker_container" "foo" {
 
 resource "docker_image" "ubuntu" {
   name = "ubuntu:latest"
- 
 }
